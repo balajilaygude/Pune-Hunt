@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest-950: #02231b;
+  --color-forest-900: #064E3B;
+  --color-forest-800: #0b684f;
+  --color-forest-700: #0f8263;
+  --color-emerald-primary: #16845B;
+  --color-emerald-light: #22a573;
+  --color-mint-accent: #65C49A;
+  --color-mint-soft: #d1fae5;
+  --color-mint-bg: #f0fdf4;
+  --color-hunt-bg: #F5F6F5;
+  --color-hunt-card: #FFFFFF;
+}
+
+:root {
+  --background: #F5F6F5;
+  --foreground: #111827;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glassmorphism & Card Glows */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.glow-green {
+  box-shadow: 0 4px 20px -2px rgba(22, 132, 91, 0.2);
+}
+
+/* Animation utilities */
+@keyframes pulse-gentle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 2.5s infinite ease-in-out;
+}
