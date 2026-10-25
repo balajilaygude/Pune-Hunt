@@ -69,7 +69,7 @@ export default function Header({ setMobileOpen }) {
 
           {/* User Profile Avatar */}
           <div className="flex items-center gap-2 pl-2 border-l border-slate-200">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#064E3B] to-[#16845B] text-white flex items-center justify-center font-bold text-xs shadow-sm ring-2 ring-emerald-50">
+            <div className="w-8 hidden xl:flex h-8 rounded-full bg-gradient-to-tr from-[#064E3B] to-[#16845B] text-white items-center justify-center font-bold text-xs shadow-sm ring-2 ring-emerald-50">
               PH
             </div>
             <div className="hidden xl:block text-left">
