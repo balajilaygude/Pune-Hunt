@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "@/context/AuthContext";
 import { GameProvider } from "@/context/GameContext";
 import AppShell from "@/components/layout/AppShell";
 
@@ -18,13 +19,23 @@ export const metadata = {
   description: "An exciting real-world spotting challenge for two explorers travelling across Pune, Maharashtra.",
 };
 
+export const dynamic = "force-dynamic";
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <body className="bg-[#F5F6F5] text-slate-900 min-h-screen">
-        <GameProvider>
-          <AppShell>{children}</AppShell>
-        </GameProvider>
+        <AuthProvider>
+          <GameProvider>
+            <AppShell>{children}</AppShell>
+          </GameProvider>
+        </AuthProvider>
       </body>
     </html>
   );

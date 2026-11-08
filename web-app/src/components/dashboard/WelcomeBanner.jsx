@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Sparkles, Gamepad2, Trophy, MapPin } from "lucide-react";
+import { Sparkles, Gamepad2, History, MapPin } from "lucide-react";
 import { useGame } from "@/context/GameContext";
 
 export default function WelcomeBanner() {
@@ -50,11 +50,11 @@ export default function WelcomeBanner() {
           </Link>
 
           <Link
-            href="/leaderboard"
+            href="/history"
             className="px-4 py-3 rounded-2xl bg-white/10 hover:bg-white/15 text-white font-semibold text-sm border border-white/20 flex items-center justify-center gap-2 transition-all"
           >
-            <Trophy className="w-4 h-4 text-emerald-200" />
-            <span>View Leaderboard</span>
+            <History className="w-4 h-4 text-emerald-200" />
+            <span>View Game History</span>
           </Link>
         </div>
       </div>

@@ -1,0 +1,22 @@
+{
+  "name": "web-backend",
+  "version": "1.0.0",
+  "description": "Real-time backend for Pune Travel Hunt with Auth, Rooms, QR Code and Live Task Tracking",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.8.1"
+  }
+}
+
